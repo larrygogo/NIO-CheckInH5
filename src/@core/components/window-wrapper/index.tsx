@@ -1,5 +1,5 @@
 // ** React Imports
-import { useState, useEffect, ReactNode } from 'react'
+import {useState, useEffect, ReactNode} from 'react'
 
 // ** Next Import
 import { useRouter } from 'next/router'
