@@ -64,7 +64,7 @@ const LangSelect = (props: Props) => {
               }}
               style={{
                 //87.32 / 43 = 2.03
-                marginRight: '-0.03rem',
+                marginRight: '-0.1rem',
                 width: '2.03rem',
                 objectFit: 'contain',
               }}
