@@ -1,21 +1,25 @@
-import Box from "@mui/material/Box";
-import Image from "next/image";
-
 const Logo = () => {
   // 获取屏幕宽度像素
-  const width = 177;
-
   return (
-    <Image
-      width={width}
-      height={61}
-      draggable="false"
-      src="/images/logo.svg"
-      alt="logo"
+    <div
       style={{
-        objectFit: 'contain',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginTop: '1.5813953488372093rem'
       }}
-    />
+    >
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        draggable="false"
+        src="/images/logo.svg"
+        alt="logo"
+        style={{
+          width: "4.116rem",
+          objectFit: 'contain',
+        }}
+      />
+    </div>
   )
 }
 

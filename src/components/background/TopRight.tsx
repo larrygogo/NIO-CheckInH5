@@ -1,11 +1,13 @@
 import Box from "@mui/material/Box";
 
 const TopRight = () => {
+
   return (
     <Box sx={{
       position: 'absolute',
       top: 0,
-      right: '6vw',
+      // 28.99 / 43 = 0.67
+      right: '0.67rem',
       zIndex: 1,
     }}>
       <img
@@ -13,8 +15,10 @@ const TopRight = () => {
         src="/images/bg-top-right.svg"
         alt="bg1"
         style={{
-          width: '100%',
-          height: '100%',
+          // 123.6 / 43 = 2.87
+          width: '2.87rem',
+          // 106.22 / 43 = 2.46
+          height: '2.46rem',
         }}
       />
     </Box>

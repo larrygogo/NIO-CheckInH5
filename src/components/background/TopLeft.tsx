@@ -5,16 +5,18 @@ const TopRight = () => {
     <Box sx={{
       position: 'absolute',
       left: 0,
-      top: '6vh',
+      // 48.96 / 43 = 1.13
+      top: '1.13rem',
       zIndex: 1,
     }}>
       <img
         draggable="false"
         src="/images/bg-top-left.svg"
-        alt="bg1"
+        alt="bg-top-left"
         style={{
-          width: '100%',
-          height: '100%',
+          // 92.45 / 43 = 2.14
+          width: '2.14rem',
+          objectFit: 'contain',
         }}
       />
     </Box>
