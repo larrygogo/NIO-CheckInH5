@@ -4,10 +4,7 @@ import { ReactNode } from 'react'
 // ** Next Import
 
 // ** MUI Components
-import Button from '@mui/material/Button'
-import { styled } from '@mui/material/styles'
-import Typography from '@mui/material/Typography'
-import Box, { BoxProps } from '@mui/material/Box'
+import Box from '@mui/material/Box'
 
 // ** Layout Import
 import BlankLayout from 'src/@core/layouts/BlankLayout'

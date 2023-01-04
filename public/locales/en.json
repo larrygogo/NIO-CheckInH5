@@ -1,5 +1,7 @@
 {
   "input.placeholder": "Enter Your UID(Email Prefix)",
-  "button.text": "Confirm",
-  "save.text": "Long press the image to save"
+  "button.submit": "Confirm",
+  "button.ok": "Ok",
+  "save.text": "Long press the image to save",
+  "uid.notFound": "UID does not exist"
 }

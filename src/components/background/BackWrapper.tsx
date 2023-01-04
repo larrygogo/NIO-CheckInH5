@@ -1,7 +1,7 @@
 import {styled} from "@mui/material";
 import Box from "@mui/material/Box";
 
-const BackWrapper = styled(Box)(({theme}) => ({
+const BackWrapper = styled(Box)(() => ({
   // 932 / 43 = 21.51
   position: 'absolute',
   top: 0,

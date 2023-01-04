@@ -1,4 +1,4 @@
-const Title = (props: any) => (
+const Title = () => (
 
   <div
     style={{

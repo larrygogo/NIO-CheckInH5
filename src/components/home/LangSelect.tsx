@@ -6,9 +6,8 @@ type Props = {
 }
 
 const LangSelect = (props: Props) => {
-  const {step, setStep} = props
+  const {setStep} = props
   const {i18n} = useTranslation();
-  const {t} = useTranslation('common');
   // 185.04 / 43 = 4.3
   const handleChange = async (lang: string) => {
     await i18n.changeLanguage(lang);

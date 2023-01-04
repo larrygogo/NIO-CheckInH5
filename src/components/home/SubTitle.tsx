@@ -1,4 +1,4 @@
-const SubTitle = (props: any) => (
+const SubTitle = () => (
   // 11.55 / 43 = 0.27
   <div
     style={{

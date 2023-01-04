@@ -1,5 +1,7 @@
 {
   "input.placeholder": "请输入域账号(邮箱前缀)",
-  "button.text": "确认",
-  "save.text": "点击图片长按保存到我的手机"
+  "button.submit": "确认",
+  "button.ok": "好的",
+  "save.text": "点击图片长按保存到我的手机",
+  "uid.notFound": "UID 不存在"
 }

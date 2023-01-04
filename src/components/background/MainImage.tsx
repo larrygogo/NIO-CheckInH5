@@ -1,4 +1,3 @@
-
 const MainImage = () => {
 
   return (

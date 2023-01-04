@@ -1,7 +1,7 @@
 import * as React from "react"
 import Box from "@mui/material/Box";
 
-const Floor = (props: any) => (
+const Floor = () => (
   <Box sx={{
     position: 'absolute',
     bottom: 0,
