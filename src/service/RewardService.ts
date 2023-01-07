@@ -10,7 +10,6 @@ class RewardService {
   constructor(uid: string, lang: string) {
     this.uid = uid
     this.lang = lang
-    console.log(this.uid, this.lang)
   }
 
   async check() {
@@ -63,7 +62,6 @@ class RewardService {
           })
 
           let reward: Reward
-          console.log(rows, rewards)
           if (rewards.length > 0) {
             // 从实物奖励中随机抽取一个
             reward = rewards[0]

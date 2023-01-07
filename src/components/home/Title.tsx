@@ -13,7 +13,7 @@ const Title = () => (
       src="/images/title.svg"
       alt="title"
       style={{
-        width: "6.4rem",
+        width: "6.82rem",
         objectFit: 'contain',
       }}
     />
