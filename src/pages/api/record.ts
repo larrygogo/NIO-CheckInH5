@@ -20,9 +20,8 @@ export default async function handler(
   } else {
     const sql = 'SELECT u.uid, u.isCheck, u.rewardType, u.name as name, u.eName, r.name as rewardName FROM `user` u LEFT JOIN `reward` r ON u.reward = r.id';
     const [rows] = await connection.query(sql, [uid]);
+
     res.status(200).json(rows)
-
   }
-
-
+  connection.release()
 }
