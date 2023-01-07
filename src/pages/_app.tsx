@@ -8,6 +8,7 @@ import {TemplateConsumer} from "src/@core/context/LayoutContext";
 import WindowWrapper from "src/@core/components/window-wrapper";
 import ThemeComponent from "src/@core/theme/ThemeComponent";
 import {useEffect} from "react";
+import { useRouter } from 'next/router';
 
 type ExtendedAppProps = AppProps & {
   Component: NextPage
@@ -18,6 +19,7 @@ const clientSideEmotionCache = createEmotionCache()
 
 export default function App(props: ExtendedAppProps) {
   const {Component, emotionCache = clientSideEmotionCache, pageProps} = props
+  const router = useRouter()
 
   // H5根据屏幕大小计算根元素的font-size
   const getFontSize = () => {
@@ -27,12 +29,14 @@ export default function App(props: ExtendedAppProps) {
   }
 
   useEffect(() => {
-    getFontSize()
-    window.addEventListener('resize', getFontSize)
-    return () => {
-      window.removeEventListener('resize', getFontSize)
+    if (router.pathname === '/') {
+      getFontSize()
+      window.addEventListener('resize', getFontSize)
+      return () => {
+        window.removeEventListener('resize', getFontSize)
+      }
     }
-  }, [])
+  }, [router])
 
   return (
     <CacheProvider value={emotionCache}>
