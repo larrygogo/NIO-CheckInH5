@@ -30,7 +30,7 @@ const NameInput = (props: Props) => {
       manual: true,
       onSuccess: (data: any) => {
         setStep(3)
-        setImage(`/images/pics/${data.data}.png`)
+        setImage(data.data)
       },
       onError: () => {
         setShowError(true)
