@@ -23,5 +23,5 @@ export default async function handler(
 
     res.status(200).json(rows)
   }
-  connection.release()
+  await connection.release()
 }

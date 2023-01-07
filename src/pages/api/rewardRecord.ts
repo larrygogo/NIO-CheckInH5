@@ -13,5 +13,7 @@ export default async function handler(
 
   const sql = 'SELECT * FROM `reward`';
   const [rows] = await connection.query(sql);
+
   res.status(200).json(rows)
+  await connection.release()
 }
