@@ -17,7 +17,7 @@ const NameInput = (props: Props) => {
   const theme = useTheme();
   const {t, i18n} = useTranslation()
   const [uid, setUid] = useState<string>('')
-  const [showError, setShowError] = useState<boolean>(false)
+  const [showError, setShowError] = useState<string>()
 
   const {loading, run: handleCheck} = useRequest(
     (uid: string, lang: string) => axios.get('/api/check', {
@@ -32,8 +32,8 @@ const NameInput = (props: Props) => {
         setStep(3)
         setImage(data.data)
       },
-      onError: () => {
-        setShowError(true)
+      onError: (e: any) => {
+        setShowError(e.response.data || e.message || 'Unknown error')
       }
     }
   )
@@ -145,7 +145,7 @@ const NameInput = (props: Props) => {
         </Box>
       </Fade>
       <Fade
-        in={showError}
+        in={!!showError}
         style={{
           transitionDelay: showError ? '800ms' : '0ms',
         }}
@@ -179,10 +179,10 @@ const NameInput = (props: Props) => {
             }}
           >
             <div style={{fontSize: '0.5rem', }}>
-              <Translations text="uid.notFound"/>
+              {showError}
             </div>
             <button
-              onClick={() => setShowError(false)}
+              onClick={() => setShowError(undefined)}
               style={{
                 backgroundColor: '#FF6010',
                 borderRadius: '0.23rem',

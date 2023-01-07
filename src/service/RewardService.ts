@@ -100,7 +100,7 @@ class RewardService {
       connection.rollback()
       return {
         code: 500,
-        message: e.message
+        message: 'Server Error'
       }
     } finally {
       await connection.release()
