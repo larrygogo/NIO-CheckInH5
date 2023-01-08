@@ -15,5 +15,5 @@ export default async function handler(
   const [rows] = await connection.query(sql);
 
   res.status(200).json(rows)
-  await connection.release()
+  await connection.end()
 }
