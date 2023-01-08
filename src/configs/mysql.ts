@@ -6,6 +6,7 @@ const pool = mysql.createPool({
   password: "965082888",
   database: "nio",
   connectionLimit: 10,
+  waitForConnections: false
 })
 
 export default pool;
